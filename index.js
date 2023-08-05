@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const config = require('./config');
 const Task = require('./models/Task');
+const cors = require('cors');
 
+app.use(cors());
 
 app.use(express.urlencoded({extended: false}));
 
